@@ -36,6 +36,14 @@ if __name__ == "__main__":
     print(englishAgent.run(prompt=input("prompt: ")))
 ```
 
+## API key
+
+If you are using an openAI model you should set the api key using environment variables.
+
+``` shell
+export OPENAI_API_KEY='super-secret-key'
+```
+
 ## Documentation
 For detailed documentation on all the functionalities, visit the full [AgentSDK Docs](./documentation/documentation.md).
 
