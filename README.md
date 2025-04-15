@@ -47,4 +47,4 @@ export OPENAI_API_KEY='super-secret-key'
 ## Documentation
 For detailed documentation on all the functionalities, visit the full [AgentSDK Docs](./documentation/documentation.md).
 
-For other agents made with this SDK please have a look at [this]() repository
+For other agents made with this SDK please have a look at [this]() repository.
