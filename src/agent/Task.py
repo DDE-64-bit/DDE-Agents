@@ -1,6 +1,6 @@
-from LLM import runLLM
-from Agent import AgentRegistry
-from Config import ModelConfig
+from agent.LLM import runLLM
+from agent.Agent import AgentRegistry
+from agent.Config import ModelConfig
 
 # __main__
 from Agent import Agent

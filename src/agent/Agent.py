@@ -1,9 +1,9 @@
 import subprocess
 import os
 import base64
-from CleanOutput import cleanOutput
+from agent.CleanOutput import cleanOutput
 
-from Config import ModelConfig
+from agent.Config import ModelConfig
 
 class AgentRegistry:
     _agents = []

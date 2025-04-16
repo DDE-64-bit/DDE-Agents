@@ -5,8 +5,8 @@ import functools
 
 # from functools import wraps
 
-from Agent import Agent
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 debug = False
 

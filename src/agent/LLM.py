@@ -1,4 +1,4 @@
-from Config import ModelConfig
+from agent.Config import ModelConfig
 
 import subprocess
 

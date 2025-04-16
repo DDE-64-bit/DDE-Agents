@@ -1,14 +1,12 @@
-import json
 import subprocess
 import sys
 import os
-import re
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from Agent import Agent
-from Config import ModelConfig
-from CleanOutput import cleanOutput
-from LLM import runLLM
+from agent.Agent import Agent
+from agent.Config import ModelConfig
+from agent.CleanOutput import cleanOutput
+from agent.LLM import runLLM
 
 ModelConfig.setDefaultModel("llama3.1", False)
 
@@ -81,7 +79,8 @@ def _runCommands(commands: str, debug: bool = False):
     if response and "commands" in response:
         for cmd in response["commands"]:
             try:
-                print(f"Running command {cmd['id']}: {cmd['command']}")
+                if debug:
+                    print(f"Running command {cmd['id']}: {cmd['command']}")
                 result_cmd = subprocess.run(cmd["command"], shell=True, capture_output=True, text=True)
                 if debug:
                     print(f"[OUTPUT]\n{result_cmd.stdout}")

@@ -1,8 +1,8 @@
 import json
 
-from Agent import Agent
-from Config import ModelConfig
-from CleanOutput import cleanOutput
+from agent.Agent import Agent
+from agent.Config import ModelConfig
+from agent.CleanOutput import cleanOutput
 
 class Chain:
     def __init__(self, agents: list['Agent']):
