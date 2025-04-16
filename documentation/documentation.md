@@ -23,7 +23,7 @@ Below is an overview of all available functionalities:
 This is the basis of this SDK. The ability to make and run agents.
 
 ``` python
-from Agent import Agent
+from agent.Agent import Agent
 
 tutorAgent = Agent(
     name="tutorAgent",  # The name of the agent
@@ -47,7 +47,7 @@ The first one is manual selection. For the second option you set the default mod
 ### Manual selection
 
 ``` python
-from Agent import Agent
+from agent.Agent import Agent
 
 agent = Agent(
     name="agent",
@@ -61,8 +61,8 @@ agent = Agent(
 ### Default model
 
 ``` python
-from Agent import Agent
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 ModelConfig.setDefaultModel("gpt-4o", True)  # The first parameter is the model and the second is comparable to the openAI bool from manual selection
 
@@ -112,7 +112,7 @@ You can use both input and output guardrails on the same agent.
 ### Input guardrails
 
 ``` python
-from Agent import Agent
+from agent.Agent import Agent
 
 tutorAgent = Agent(
     name="tutorAgent",
@@ -131,7 +131,7 @@ if __name__ == "__main__":
 ### Output guardrails
 
 ``` python
-from Agent import Agent
+from agent.Agent import Agent
 
 tutorAgent = Agent(
     name="tutorAgent",
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 ### Both guardrails
 
 ``` python
-from Agent import Agent
+from agent.Agent import Agent
 
 tutorAgent = Agent(
     name="tutorAgent",
@@ -171,9 +171,9 @@ if __name__ == "__main__":
 With a chain you can link a few agents together that will be run in sequence.
 
 ``` python
-from Agent import Agent
-from Chain import Chain
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Chain import Chain
+from agent.Config import ModelConfig
 
 # Set model
 ModelConfig.setDefaultModel("gpt-4o", True)
@@ -213,9 +213,9 @@ if __name__ == "__main__":
 Generate agent is a powerful tool to dynamically generate agents fitting the task.
 
 ``` python
-from Agent import Agent
-from Chain import Chain
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Chain import Chain
+from agent.Config import ModelConfig
 
 # Set model
 ModelConfig.setDefaultModel("gpt-4o", True)
@@ -254,8 +254,8 @@ There are 3 type of tools:
 ### Agent as tool
 
 ``` python
-from Agent import Agent
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 ModelConfig.setDefaultModel("gpt-4o", True)
 
@@ -280,8 +280,8 @@ if __name__ == "__main__":
 ### Function as tool
 
 ``` python
-from Agent import Agent
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 import random
 
@@ -319,9 +319,9 @@ if __name__ == "__main__":
 ### Dynamic function as tool
 
 ``` python
-from Agent import Agent
-from Config import ModelConfig
-from Tool import dynamicTool
+from agent.Agent import Agent
+from agent.Config import ModelConfig
+from agent.Tool import dynamicTool
 
 import random
 
@@ -356,8 +356,8 @@ if __name__ == "__main__":
 Handoffs let you give the task/prompt to the next agent with all the context from example tool you've previous ran with that agent or in its context.
 
 ``` python 
-from Agent import Agent
-from Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 ModelConfig.setDefaultModel("gpt-4o", True)
 
