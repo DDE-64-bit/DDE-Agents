@@ -21,8 +21,8 @@ pip install dde-agents
 Here’s a simple example to create and run an AI agent:
 
 ```python
-from agents.Agent import Agent
-from agents.Config import ModelConfig
+from agent.Agent import Agent
+from agent.Config import ModelConfig
 
 ModelConfig.setDefaultModel("gpt-4o", True)
 
