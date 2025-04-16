@@ -50,7 +50,7 @@ export OPENAI_API_KEY='super-secret-key'
 
 ## Requirements
 
-You need to have ollama installed, you can download it [here](https://ollama.com/)
+You need to have ollama installed, you can download it [here](https://ollama.com/).
 This is important if you want to use local GGUF models.
 
 
