@@ -9,6 +9,10 @@ DDE Agents is a lightweight and flexible software development kit designed to he
 - **Scalability**: Designed to handle small to large-scale multi-agent projects.
 - **Easy Tool Intergration**: You can easily create (dynamic) functions or agents as tools.
 
+And above all you can use local ollama and openAI models.
+
+If you want to use a hugginface [GGUF model](https://huggingface.co/docs/hub/gguf) you can do so by setting the model to hf.co/{author}/{model}.
+
 ## Installation
 To install AgentSDK, use the following command:
 ```bash
@@ -44,7 +48,13 @@ If you are using an openAI model you should set the api key using environment va
 export OPENAI_API_KEY='super-secret-key'
 ```
 
-## Documentation
-For detailed documentation on all the functionalities, visit the full [AgentSDK Docs](./documentation/documentation.md).
+## Requirements
 
-For other agents made with this SDK please have a look at [this]() repository.
+You need to have ollama installed, you can download it [here](https://ollama.com/)
+This is important if you want to use local GGUF models.
+
+
+## Documentation
+For detailed documentation on all the functionalities, visit the full [DDE Agents Docs](./documentation/documentation.md).
+
+For other agents made with this SDK please have a look at [this](https://github.com/DDE-64-bit/AI-agents) repository.
