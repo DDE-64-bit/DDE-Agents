@@ -8,9 +8,6 @@ def runLLM(prompt: str, debug: bool = False):
         print(f"[DEBUG] ModelConig.getDefaultOpenAI: {ModelConfig.getDefaultOpenAI()}")
         print(f"[DEBUG] ModelConig.getDefaultModel: {ModelConfig.getDefaultModel()}")
     
-    
-    
-    
     if ModelConfig.getDefaultOpenAI():
         from openai import OpenAI
         client = OpenAI()

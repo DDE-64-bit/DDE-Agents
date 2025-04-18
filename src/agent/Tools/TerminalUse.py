@@ -7,6 +7,7 @@ from agent.Agent import Agent
 from agent.Config import ModelConfig
 from agent.CleanOutput import cleanOutput
 from agent.LLM import runLLM
+from agent.Tool import dynamicTool
 
 ModelConfig.setDefaultModel("llama3.1", False)
 
@@ -91,13 +92,35 @@ def _runCommands(commands: str, debug: bool = False):
                 print(f"[EXCEPTION] Failed to run command {cmd['id']}: {e}")
     else:
         print("No valid commands found.")
-        
+
+
+
+     
 def terminalUse(task: str, debug: bool = False):
     steps = _makeSteps(task=task, debug=debug)
     commands = _makeCommands(steps=steps, debug=debug)
     r = _runCommands(commands=commands, debug=debug)
     
     return r
+
+
+
+
+@dynamicTool
+def dynamicTerminalUse(task: str, debug: bool = False):
+    """
+        Task is a string and need to be a desciption of a task that needs to be able to be broken down into smaller commands to run.
+    """
+    
+    steps = _makeSteps(task=task, debug=debug)
+    commands = _makeCommands(steps=steps, debug=debug)
+    r = _runCommands(commands=commands, debug=debug)
+    
+    return r
+
+
+
+
 
 if __name__ == "__main__":
     print(terminalUse(task="make a file called 1 and in it put a funny oneliner. on linux", debug=debug))
