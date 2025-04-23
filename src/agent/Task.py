@@ -46,7 +46,7 @@ class Task:
             elif not ModelConfig.getDefaultOpenAI():
                 selectedAgent = AgentRegistry.get_agent(stdout.strip())
             
-            response += selectedAgent.run(prompt="hi", debug=self.debug)            
+            response += selectedAgent.run(prompt=attemptSolvePrompt, debug=self.debug)            
             
             if self.debug:
                 print(f"[DEBUG] selectedAgent: {selectedAgent}")
@@ -72,6 +72,6 @@ if __name__== "__main__":
         instruction="Give a solution",
     )
     
-    newTask = Task(task="solve 15+987675=???", agents=[solutionAgent], repeat=True, exitValue="solution reached", debug=True)
+    newTask = Task(task="solve 15+987675=???", agents=[solutionAgent], repeat=True, exitValue="right answer given", debug=True)
 
     newTask.solve()
