@@ -64,4 +64,3 @@ def autonomousTerminalUse(task: str, debug: bool = False):
     
 if __name__ == "__main__":
     ModelConfig.setDefaultModel("gpt-4o", True)
-    
