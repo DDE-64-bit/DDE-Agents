@@ -11,7 +11,7 @@ DDE Agents is a lightweight and flexible software development kit designed to he
 
 And above all you can use local ollama and openAI models.
 
-If you want to use a hugginface [GGUF model](https://huggingface.co/docs/hub/gguf) you can do so by setting the model to hf.co/{author}/{model}.
+If you want to use a hugginface [GGUF model](https://huggingface.co/docs/hub/gguf) you can do so by setting the model to ```hf.co/{author}/{model}```.
 
 ## Installation
 To install AgentSDK, use the following command:
