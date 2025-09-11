@@ -32,7 +32,7 @@ ModelConfig.setDefaultModel("gpt-4o", True)
 
 englishAgent = Agent(
     name="englishAgent",
-    instructions="You can only answer in english",
+    instruction="You can only answer in english",
     inputGuardrails="The input can only be english",
 )
 
